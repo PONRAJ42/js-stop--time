@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="html,js">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>time stop</title>
+
+</head>  
+<body>  
+<script>  
+function waitAndshow() {  
+    
+  var systemdate = new Date();  
+      
+  
+  document.getElementById("clock").innerHTML = systemdate.toLocaleTimeString();  
+}  
+  
+   
+function stopClock() {  
+    clearInterval(intervalID);  
+}  
+  
+  
+var intervalID = setInterval(waitAndshow, 3000);  
+</script>  
+   
+<p>Current system time: <span id="clock"> </span> </p>  
+  
+<!-- button to stop showing time in a regular interval -->  
+<button onclick = "stopClock();" > Stop Clock </button>  
+</body>  
+</html>  
